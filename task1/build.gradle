@@ -1,0 +1,18 @@
+plugins {
+  id 'applications-conventions'
+}
+
+dependencies {
+  implementation 'org.apache.commons:commons-text'
+}
+
+application {
+  mainClass = 'lab1.task1.App'
+}
+
+task printTestClasspath {
+  doLast {
+    println "Test runtime classpath:"
+    sourceSets.test.runtimeClasspath.each { println it }
+  }
+}
